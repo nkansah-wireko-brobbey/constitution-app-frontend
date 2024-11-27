@@ -1,17 +1,13 @@
 import Link from 'next/link'
-import { MobileMenuToggle } from './mobile-menu-toggle'
+// import { MobileMenuToggle } from './mobile-menu-toggle'
 import { ModeToggle } from './dark-theme-switch';
 
-const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Contact', href: '/contact' },
+const navItems: { name: string, href: string }[] = [
 ]
 
 export default function Navbar() {
   return (
-    <nav className="shadow-md bg-background">
+    <nav className="shadow-md bg-background backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -30,18 +26,21 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="flex items-center sm:hidden">
+          {/* <div className="flex items-center sm:hidden">
             <MobileMenuToggle />
+          </div> */}
+          <div className=' flex items-center'>
+            <ModeToggle />
+
           </div>
         </div>
       </div>
-      <MobileMenu navItems={navItems} />
-      <ModeToggle />
+      {/* <MobileMenu navItems={navItems} /> */}
     </nav>
   )
 }
 
-function MobileMenu({ navItems }: { navItems: Array<{ name: string; href: string }> }) {
+export function MobileMenu({ navItems }: { navItems: Array<{ name: string; href: string }> }) {
   return (
     <div className="sm:hidden" id="mobile-menu">
       <div className="pt-2 pb-3 space-y-1">
