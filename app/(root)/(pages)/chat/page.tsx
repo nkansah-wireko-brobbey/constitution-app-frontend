@@ -1,8 +1,14 @@
+import ChatBoard from '@/components/chat-board'
 import React from 'react'
 
 const Page = () => {
   return (
-    <div>This is the chat page</div>
+    <div className='container mx-auto p-4'>
+      
+      
+      <ChatBoard />
+      
+      </div>
   )
 }
 
