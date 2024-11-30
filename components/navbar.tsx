@@ -7,12 +7,12 @@ const navItems: { name: string, href: string }[] = [
 
 export default function Navbar() {
   return (
-    <nav className="shadow-md bg-background backdrop-blur-xl">
+    <nav className=" bg-background/25 backdrop-blur-xl border-b opacity-90 sticky top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-xl font-bold">Logo</span>
+              <span className="text-xl font-bold">Chat</span>
             </Link>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
