@@ -4,7 +4,7 @@ export default function StickyChatFooter() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // console.log('Message sent:', message)
+    console.log('Message sent:', e.currentTarget)
     // setMessage('')
   }
 
